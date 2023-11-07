@@ -22,7 +22,7 @@ export default function UpdateStaff() {
   const [open, setOpen] = useState(false);
 
   const [APIData, setAPIData] = useState([]);
-  const getStaffsUrl = `https://6544fc285a0b4b04436d62d4.mockapi.io/staffManagement/${staff.id}`;
+  const getStaffsUrl = `https://654a5b7c1f197d51e4921a16.mockapi.io/api/char/${staff.id}`;
 
   useEffect(() => {
     axios
@@ -38,7 +38,7 @@ export default function UpdateStaff() {
   const handleClose = () => {
     setOpen(false);
   };
-  const putStaffUrl = `https://6544fc285a0b4b04436d62d4.mockapi.io/staffManagement/${staff.id}`;
+  const putStaffUrl = `https://654a5b7c1f197d51e4921a16.mockapi.io/api/char/${staff.id}`;
 
   const formik = useFormik({
     enableReinitialize: true,

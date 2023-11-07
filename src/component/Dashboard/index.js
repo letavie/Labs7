@@ -29,9 +29,8 @@ export default function Dashboard() {
   const [open, setOpen] = useState(false);
   const [openDelSucDia, setOpenDelSucDia] = useState(false);
   const [idDelete, setIdDelete] = useState(-1);
-  const getStaffsUrl =
-    "https://6544fc285a0b4b04436d62d4.mockapi.io/staffManagement";
-  const deleteStaffsUrl = `https://6544fc285a0b4b04436d62d4.mockapi.io/staffManagement`;
+  const getStaffsUrl = "https://654a5b7c1f197d51e4921a16.mockapi.io/api/char";
+  const deleteStaffsUrl = `https://654a5b7c1f197d51e4921a16.mockapi.io/api/char`;
 
   useEffect(() => {
     loadStaffs();

@@ -23,8 +23,7 @@ import axios from "axios";
 
 export default function Home() {
   const [APIData, setAPIData] = useState([]);
-  const getStaffsUrl =
-    "https://6544fc285a0b4b04436d62d4.mockapi.io/staffManagement";
+  const getStaffsUrl = "https://654a5b7c1f197d51e4921a16.mockapi.io/api/char";
 
   useEffect(() => {
     axios
@@ -57,13 +56,20 @@ export default function Home() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
+                  <b>Name: </b>
                   <Link to={`detail/${staff.id}`}>
                     <a>{staff.name}</a>
                   </Link>
                 </Typography>
 
                 <Typography gutterBottom variant="h5" component="div">
-                  {staff.age}
+                  <b>Age: </b> {staff.age}
+                </Typography>
+                <Typography gutterBottom variant="h5" component="div">
+                  <b>address: </b> {staff.address}
+                </Typography>
+                <Typography gutterBottom variant="h5" component="div">
+                  <b>Magic Type: </b> {staff.magic_type}
                 </Typography>
               </CardContent>
               <CardActions>

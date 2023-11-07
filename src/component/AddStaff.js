@@ -20,8 +20,7 @@ export default function AddStaff() {
   const handleClose = () => {
     setOpen(false);
   };
-  const postStaffUrl =
-    "https://6544fc285a0b4b04436d62d4.mockapi.io/staffManagement";
+  const postStaffUrl = "https://654a5b7c1f197d51e4921a16.mockapi.io/api/char";
   const currDate = new Date();
 
   const formik = useFormik({

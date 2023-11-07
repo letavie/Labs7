@@ -10,7 +10,7 @@ export default function Detail() {
   const staff = useParams();
 
   const [APIData, setAPIData] = useState([]);
-  const getStaffsUrl = `https://6544fc285a0b4b04436d62d4.mockapi.io/staffManagement/${staff.id}`;
+  const getStaffsUrl = `https://654a5b7c1f197d51e4921a16.mockapi.io/api/char/${staff.id}`;
 
   useEffect(() => {
     fetch(getStaffsUrl, { method: "GET" })
@@ -39,11 +39,18 @@ export default function Detail() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                <div>{APIData.name}</div>
+                <b>Name: </b>
+                <a>{APIData.name}</a>
               </Typography>
 
               <Typography gutterBottom variant="h5" component="div">
-                {APIData.age}
+                <b>Age: </b> {APIData.age}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="div">
+                <b>address: </b> {APIData.address}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="div">
+                <b>Magic Type: </b> {APIData.magic_type}
               </Typography>
             </CardContent>
           </Card>
